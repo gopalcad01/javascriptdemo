@@ -7,8 +7,42 @@
     
 </head>
 <body>
-    <h1>Javascript Demo For Beginners</h1>
-    <script src="js/script.js"></script>
-    
+    <h1>welcome to javascript demo</h1>
+    <input type="text" id="v1" name="v1" value=""><br>
+    <input type="text" id="v2" name="v2" value=""><br>
+    <input type="submit" value="ADDITION" onclick="operatorfun('+')">
+    <input type="submit" value="SUBTRACTION" onclick="operatorfun('-')">
+    <input type="submit" value="MULTIPILICATION" onclick="operatorfun('*')">
+    <input type="submit" value="DIVISION" onclick="operatorfun('/')">
+
+<P id="result">FOR ADDITION</P>
+<p id="output" > FOR SUBTRACTION</p> 
+<P id="output1">FOR MULTIPILICATION</P>
+<p id="output2" > FOR DIVISION</p>
+<script>
+    function operatorfun(a){
+        var value1=document.getElementById("v1").value;
+        var value2=document.getElementById("v2").value;
+        value1=Number(value1);
+        value2=Number(value2);
+
+        switch(a){
+            case '+':
+                document.getElementById("result").innerHTML= value1 + value2;
+                break;
+            case '-':
+                document.getElementById("output").innerHTML= value1 - value2;
+                break;
+            case '*':
+                document.getElementById("output1").innerHTML= value1 * value2;
+                break;
+            case '/':
+                document.getElementById("output2").innerHTML= value1 / value2;
+                break;
+  
+        }
+        
+}
+</script>
 </body>
 </html>
